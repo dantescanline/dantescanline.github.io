@@ -1,14 +1,20 @@
 :root {
-  --black: #150805;
-  --deep-red: #5e0a04;
+  --black: #1e0c08;
+  --deep-red: #790e06;
   --medium-red: #532c29;
-  --white: #fec;
-  --white-link: rgb(185, 179, 145);
+  --white: hsl(60, 30%, 90%);
+  --white-link: #fff;
 }
 
+@font-face {
+  font-family: "open-sans";
+  src: url("opensans.ttf")
+}
+
+
 body {
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: open-sans;
+  font-size: 15px;
   color: var(--white);
   background: #080402;
   margin: 0;
@@ -20,7 +26,7 @@ a {
 }
 
 a:hover {
-  color: var(--white)
+  color: var(--white) !important;
 }
 
 a:visited {
@@ -30,11 +36,13 @@ a:visited {
 h1 {
   font-size: 2em;
   font-weight: 600;
+
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: 600;
+
 }
 
 h3 {
@@ -42,13 +50,14 @@ h3 {
   font-weight: 400;
 }
 
+
 #container {
   background: var(--black);
   margin: 0 auto;
   width: 1000px;
 }
 
-#header {
+#main-header {
   background-image: url('images/headerbg.jpg');
   background-size: cover;
   text-align: center;
@@ -60,20 +69,86 @@ h3 {
   padding: 20px;
 }
 
+#footer-text{
+  font-family: monospace;
+  color: #864a45;
+}
+
 #menu {
-  display: flex;
-  flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+
 }
 
 #menu .item {
+  height: 55px;
+  font-size: 30px;
+  grid-column: span 2;
+  border: 5px ridge #5c6446;
+  text-align: center;
+  display:flex;
+  align-items:center;
+  border-radius: 10px 10px;
+  justify-content: center;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+#menu-blog {
+  background: url(images/tiles/q1greenbrick.png);
+  line-height: 70%;
+  /* padding-top: 10px !important; */
+}
+
+.menu-blog-small {
+  font-size:15px;
+}
+
+#menu-projects {
+  background: url(images/tiles/q1copper.png);
+}
+
+#menu-misc {
+  background: url(images/tiles/q1blue.png);
+}
+
+#sub-menu {
+  display: flex;
+  padding: 10px 6px;
+  flex-direction: row-reverse;
+  background: rgb(57, 22, 14);
+  border-top: 5px ridge var(--deep-red);
+  border-bottom: 5px ridge var(--deep-red);
+}
+
+#sub-menu .item {
   margin-left: 5px;
+  border-radius: 5px 5px;
   padding: 10px;
   background: var(--medium-red);
 }
 
-#menu .item a {
+#sub-menu .item a {
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: 600; */
+  font-size: 18px;
+}
+
+#sub-menu .item a:hover {
+text-decoration: underline;
+}
+
+#sub-menu-title {
+  margin-left: 5px;
+  padding: 10px;
   font-size: 20px;
 }
 
@@ -89,4 +164,51 @@ h3 {
 
 .tile-grid img {
   width: 100%;
+}
+
+#projects-box {
+
+}
+
+#projects-box > div {
+  background: black;
+  border-radius: 10px 10px;
+  padding: 10px;
+  border-top: 5px ridge #7a4844;
+  border-bottom: 5px ridge var(--medium-red);
+  margin-bottom: 50px;
+}
+
+#projects-box h2 {
+  margin-top: 0px;
+  color: white;
+}
+
+#projects-box .span-2 {
+  grid-column: span 2;
+}
+
+
+ul.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0px;
+}
+
+.gallery li {
+  list-style-type: none;
+  height: 28vh;
+  flex-grow: 1;
+}
+
+.gallery li:last-child {
+  flex-grow: 10;
+}
+
+.gallery img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
 }

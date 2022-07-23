@@ -210,9 +210,33 @@ if (document.getElementById("postDate")) {
 if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
 }
+if (document.getElementById("latest-blog-post")) {
+  let lastPost = postsArray[postsArray.length-1]
+  console.log(lastPost)
+  const lastPostTitle = formatPostTitle(postsArray.length-1)
+  document.getElementById("latest-blog-post").innerHTML = `<a href="blog/${lastPost[0]}">Latest Post ${niceDateFunction(lastPost)}: <br/> "${lastPostTitle}"</a>`;
+}
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
 //The <title> tag content is what shows up on browser tabs
 if (document.title === "Blog Post") {
   document.title = currentPostTitle;
+}
+
+function niceDateFunction (thePost) {
+  let monthSlice = thePost[0].slice(11, 13);
+  let month = "";
+  if (monthSlice === "01") { month = "Jan"; }
+  else if (monthSlice === "02") { month = "Feb"; }
+  else if (monthSlice === "03") { month = "Mar"; }
+  else if (monthSlice === "04") { month = "Apr"; }
+  else if (monthSlice === "05") { month = "May"; }
+  else if (monthSlice === "06") { month = "Jun"; }
+  else if (monthSlice === "07") { month = "Jul"; }
+  else if (monthSlice === "08") { month = "Aug"; }
+  else if (monthSlice === "09") { month = "Sep"; }
+  else if (monthSlice === "10") { month = "Oct"; }
+  else if (monthSlice === "11") { month = "Nov"; }
+  else if (monthSlice === "12") { month = "Dec"; }
+  return thePost[0].slice(14, 16) + " " + month + ", " + thePost[0].slice(6, 10);
 }

@@ -6,32 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Dante Scanline</title>
+  <title>Dante Scanline - a website for pigs</title>
 </head>
 
 <body>
   <div id="container">
-    <div id="header">
+    <div id="main-header">
       <img src="images/titlelogo.gif">
     </div>
     <div id="menu">
-      <div class="item"><img src="images/masto_icon.png" height="15"><a
+
+      <div id="menu-projects" class="item">
+        <a href="projects.html">
+          PROJECTS
+        </a>
+      </div>
+
+      <div id="menu-blog" class="item">
+        <a href="blog/index.html" style="margin-right:10px;">BLOG</a><br>
+        <span class="menu-blog-small"><span id="latest-blog-post">e</span></span>
+      </div>
+
+      <div id="menu-misc" class="item"><a href="miscellaneous.html"> MISCELLANEOUS</a></div>
+
+    </div>
+    <div id="sub-menu">
+      <div class="item"><img src="images/masto_icon.png" height="15"><a rel="me"
           href="https://autonomous.zone/web/@dantescanline">@dantescanline@autonomous.zone</a></div>
       <div class="item"><a href="https://dantescanline.itch.io/">Games @ Itch.io</a></div>
-      <div class="item"><a href="https://www.quaddicted.com/reviews/?filtered=dantescanline"><img
-            src="images/quakeicon2.png" height="15"> Quake Maps</a></div>
+      <div class="item"><img src="images/quakeicon2.png" height="15"><a
+          href="https://www.quaddicted.com/reviews/?filtered=dantescanline"> Quake Maps</a></div>
       <div class="item"><a href="https://github.com/dantescanline">Github</a></div>
+      <div id="sub-menu-title"><img src="images/cloudbox.gif" alt="" style="margin-top: -6px;">&nbsp;&nbsp;&nbsp;
+        External links</div>
     </div>
     <div id="column">
-      <h1>Welcome</h1>
-      <P>
-        This is my placeholder site til I get something more exciting going. You can email me at
-        <span class="email">dantescanline (at)
-          posteo dot net</span>
-      </P>
-      <center>
-        <img src="images/quake.png" alt="comic panel where dilbert says he is playing 'quake'">
-      </center>
       <h2>About</h2>
       <p>
         I like to make music, 3d, games, websites, zines, comics, videos, plants. I made weird art games with the people
@@ -40,8 +49,12 @@
         part of the very active <a href="https://www.celephais.net/board/view_thread.php?id=61601">mapping
           community.</a> I'm very interested in lofi 'retro' 3d
       </p>
-
-
+      <center>
+        <img src="images/quake.png" alt="comic panel where dilbert says he is playing 'quake'">
+      </center>
+      <h3>"dante scanline"</h3>
+      <p>I chose this nickname for making quake maps originally, because i wanted a 2000s era 'edgy' internet handle
+        that also sounded kinda stupid. Now i'm stuck with it.</p>
       <h2>Personal Values</h2>
       <p>I strongly value open source and am a copyright abolitionist. I think software should serve people and not the
         other way around. I am an
@@ -62,13 +75,12 @@
         <img src="images/splash/doom.png">
         <img src="images/splash/quake.png">
       </div>
-      <br><Br><br><Br><Br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br><Br><img src="images/cait.gif" alt="">
+      <div id="footer-text">UNIVERSAL PUBLIC DOMAIN LICENSE - This website and everything else in the universe is in the
+        public domain.</div>
     </div>
   </div>
+  <script src="blog/script.js"></script>
 </body>
 
 </html>
