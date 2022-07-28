@@ -28,8 +28,8 @@ body {
   bottom: 0px;
   right: 0px;
   height: 130px;
-  border-top: 5px ridge rgb(170, 104, 18);
-  background: rgb(92, 66, 37);
+  border-top: 10px ridge rgb(170, 104, 18);
+  background: url(images/wood1.png);
   z-index: 20;
   text-align: center;
 }
@@ -54,8 +54,19 @@ body {
   grid-template-columns: repeat(11, 1fr);
 }
 
-.inventory-item {
-  border: 2px solid green;
+.inventory-item img {
+  filter: drop-shadow(-3px 1px 5px rgba(26, 26, 26, 1));
+}
+
+.inventory-item .counter {
+  position: relative;
+  left:0px;
+  right:0px;
+  bottom: 15px;
+  height: 20px;
+  font-size:22px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 #world {
