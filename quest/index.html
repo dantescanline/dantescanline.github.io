@@ -7,12 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="quest-style.css">
   <title>Document</title>
+  <script src="lib.js"></script>
 </head>
 
 <body>
-  <img src="images/chara.png" alt="" class="character">
+  <div id="ui-bottom">
+    <img src="images/redmana_small.png" alt="" class="bottom-left">
+    <img src="images/bluemana_small.png" alt="" class="bottom-right">
+    <img src="images/quest_title.png">
+  </div>
 
-  <div class="desert-row">blah</div>
+  <div id="main-character" class="character">
+    <img src="images/chara_small.png" width="70" alt="">
+    <div class="ui-title">
+      MAIN CHARACTER
+    </div>
+  </div>
+  <div id="world">
+    <div class="desert-row"></div>
+    <div class="desert-row"></div>
+    <div class="desert-row"></div>
+    <div class="desert-row"></div>
+    <div class="desert-row"></div>
+  </div>
+  <script src="quest.js"></script>
 </body>
 
 </html>
