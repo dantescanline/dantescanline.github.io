@@ -57,6 +57,10 @@ h3 {
   width: 1000px;
 }
 
+#container-large {
+  margin: 0 auto;
+}
+
 #main-header {
   background-image: url('images/headerbg.jpg');
   background-size: cover;
@@ -211,4 +215,46 @@ ul.gallery {
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
+}
+
+.double-image img {
+  /* width: 162px; */
+  margin-right:10px;
+  /* margin-bottom: 10px; */
+  vertical-align: middle;
+  /* image-rendering: pixelated; */
+}
+
+ul.image-list {
+  padding-left:0;
+}
+
+.image-list li {
+  margin-bottom: 15px;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.links-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 0.33fr));
+  grid-auto-rows: minmax(50px, auto);
+  grid-auto-flow: dense;
+  gap: 20px;
+  justify-content: center;
+}
+
+.links-grid li {
+  margin-bottom: 10px;
+}
+
+.links-grid h2 {
+  font-style: italic;
+  margin: 5px;
+}
+
+.links-grid > div {
+  background:var(--black);
+  border-radius: 10px 10px;
+  padding: 5px;
 }
