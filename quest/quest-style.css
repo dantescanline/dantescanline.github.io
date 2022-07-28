@@ -7,13 +7,13 @@ body {
   text-shadow: 2px 2px 2px black;
 }
 
-  /* .character {
-    image-rendering:crisp-edges;
+  .pulse {
+    image-rendering: pixelated;
     animation-name: light-pulse;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
    
-  } */
+  } 
 
 @font-face {
   font-family: cordata;
@@ -73,6 +73,18 @@ body {
   cursor: pointer;
 }
 
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  height: 100%;
+  position: relative;
+}
+
+.three-column > div {
+  height: 100%;
+}
+
 .desert-row {
   background-image: url(images/desert_bg.jpg);
   background-repeat:repeat-x;
@@ -103,8 +115,19 @@ body {
   top:0;
   left:0;
   transform: translate(300px, 0);
-  filter: drop-shadow(1px 3px 5px rgba(255, 255, 255, 0.95));
   /* border: 1px solid white; */
+}
+
+.glow {
+  filter: drop-shadow(1px 3px 5px rgba(248, 248, 248, 0.95));
+}
+
+.glow-friendly {
+  filter: drop-shadow(1px 3px 5px rgba(102, 214, 248, 0.95));
+}
+
+.glow-enemy {
+  filter: drop-shadow(1px 3px 5px rgba(248, 112, 102, 0.95));
 }
 
 .ui-title {
@@ -114,6 +137,10 @@ body {
   color: white;
   text-align: center;
   text-shadow: 3px 3px 3px black;
+  background: rgba(0,0,0,0.3);
+  padding: 3px;
+  z-index: 1;
+  position: relative;
 }
 
 #main-character {
@@ -122,7 +149,7 @@ body {
 }
 
 @keyframes light-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% { transform: scale(1);}
+  50% { transform: scale(1.2)}
+  100% { transform: scale(1)}
 }
