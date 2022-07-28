@@ -90,12 +90,18 @@ h3 {
   height: 55px;
   font-size: 30px;
   grid-column: span 2;
-  border: 5px ridge #5c6446;
+  border: 5px ridge #95a079;
+
   text-align: center;
   display:flex;
   align-items:center;
   border-radius: 10px 10px;
   justify-content: center;
+  text-shadow: 3px 3px 3px #000000;
+}
+
+#menu .item:hover {
+  border: 5px ridge #5c6446;
 }
 
 #menu a {
@@ -124,9 +130,21 @@ h3 {
   background: url(images/tiles/q1blue.png);
 }
 
+#menu-rpg {
+  background: url(images/tiles/rpgtexture.JPG)
+}
+
+#menu-extra {
+  background: url(images/tiles/q1brick.png)
+}
+
+#menu-contact {
+  background: url(images/tiles/q1cracks.png)
+}
+
 #sub-menu {
   display: flex;
-  padding: 10px 6px;
+  padding: 5px 6px;
   flex-direction: row-reverse;
   background: rgb(57, 22, 14);
   border-top: 5px ridge var(--deep-red);
@@ -136,7 +154,7 @@ h3 {
 #sub-menu .item {
   margin-left: 5px;
   border-radius: 5px 5px;
-  padding: 10px;
+  padding: 5px 10px;
   background: var(--medium-red);
 }
 
@@ -152,7 +170,7 @@ text-decoration: underline;
 
 #sub-menu-title {
   margin-left: 5px;
-  padding: 10px;
+  padding: 5px;
   font-size: 20px;
 }
 
