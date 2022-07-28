@@ -78,18 +78,28 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   height: 100%;
-  position: relative;
+ 
 }
 
 .three-column > div {
   height: 100%;
+  position: relative;
 }
 
 .desert-row {
   background-image: url(images/desert_bg.jpg);
   background-repeat:repeat-x;
   height: 603px;
-  
+}
+
+.sky-header {
+  background-image: url(images/questskyheader.jpg);
+  background-repeat:repeat-x;
+  height: 603px;
+}
+
+.big-text {
+  font-size: 30px;
 }
 
 .center {
@@ -119,15 +129,15 @@ body {
 }
 
 .glow {
-  filter: drop-shadow(1px 3px 5px rgba(248, 248, 248, 0.95));
+  filter: drop-shadow(3px 3px 5px rgba(248, 248, 248, 0.95));
 }
 
 .glow-friendly {
-  filter: drop-shadow(1px 3px 5px rgba(102, 214, 248, 0.95));
+  filter: drop-shadow(5px 5px 5px rgba(102, 214, 248, 0.95));
 }
 
 .glow-enemy {
-  filter: drop-shadow(1px 3px 5px rgba(248, 112, 102, 0.95));
+  filter: drop-shadow(5px 5px 5px rgba(248, 112, 102, 0.95));
 }
 
 .ui-title {

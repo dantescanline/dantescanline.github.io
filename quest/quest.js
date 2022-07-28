@@ -8,7 +8,7 @@ let speed = 3
 
 // let goalPos = V2.from(charPos)
 
-let mainChar = new Mob(mainCharacterElement, 80, 150)
+let mainChar = new Mob(mainCharacterElement, window.visualViewport.width / 2 - 150, 350)
 
 window.addEventListener('click', function (e) {
 
