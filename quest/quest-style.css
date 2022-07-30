@@ -20,6 +20,28 @@ body {
   src: url('Web437_Cordata_PPC-400.woff');
 }
 
+#mobile-warning {
+  display:none;
+  width: 240px;
+  height: 100px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+  background: rgba(80, 20, 20, 0.8);
+  text-align: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 480px) {
+  /* your CSS here */
+  #mobile-warning {
+    display: block  !important;
+
+  }
+}
+
+
 #ui-bottom {
   position: fixed;
   padding-top:10px;
