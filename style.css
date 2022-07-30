@@ -50,6 +50,10 @@ h3 {
   font-weight: 400;
 }
 
+.center {
+  text-align: center;
+}
+
 
 #container {
   background: var(--black);
@@ -189,11 +193,15 @@ text-decoration: underline;
 }
 
 #projects-box {
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, 0.33fr));
+  justify-content: center;
+  grid-auto-flow: row dense;
+  gap: 30px;
 }
 
 #projects-box > div {
-  background: black;
+  background: var(--black);
   border-radius: 10px 10px;
   padding: 10px;
   border-top: 5px ridge #7a4844;
@@ -220,7 +228,7 @@ ul.gallery {
 
 .gallery li {
   list-style-type: none;
-  height: 28vh;
+  height: 23vh;
   flex-grow: 1;
 }
 
