@@ -1,5 +1,5 @@
 :root {
-  --black: #1e0c08;
+  --black: #30140e;
   --deep-red: #790e06;
   --medium-red: #532c29;
   --white: hsl(60, 30%, 90%);
@@ -126,7 +126,7 @@ h3 {
   background: url(images/tiles/q1copper.png);
 }
 
-#menu-misc {
+#menu-links {
   background: url(images/tiles/q1blue.png);
 }
 
@@ -272,7 +272,8 @@ ul.image-list {
 }
 
 .links-grid > div {
-  background:var(--black);
+  background: #482e28;
   border-radius: 10px 10px;
-  padding: 5px;
+  padding: 10px;
+  border: 1px solid grey;
 }
