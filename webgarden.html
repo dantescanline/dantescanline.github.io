@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melons WEBGARDEN</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    body,
+    html,
+    #garden {
+      border: none;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background-color: black;
+      color: red !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: red !important;
+    }
+
+    a:hover {
+      color: red !important;
+    }
+
+
+    #garden {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin: -125px 0 0 -125px;
+      width: 250px;
+      height: 250px;
+      background: url(images/stars.jpg);
+      background-size: 100%;
+      background-position: center;
+      animation: pulse-background 6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes pulse-background {
+
+      0%,
+      100% {
+        background-size: 100%;
+      }
+
+      50% {
+        background-size: 150%;
+      }
+    }
+
+
+    #badge {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+    }
+
+    #flames {
+      position: absolute;
+      bottom: -5px;
+      left: -40px;
+    }
+
+    #flames-text {
+      position: absolute;
+      bottom: 0px;
+      left: -3px;
+      right: -3px;
+      height: 30px;
+      text-align: center;
+      font-size: 23px;
+      font-style: italic;
+      color: rgb(110, 250, 255);
+      text-shadow: 2px 2px 2px black;
+    }
+
+    #center-animation {
+      position: absolute;
+      background: transparent;
+      left: 15px;
+      top: 15px;
+      filter: drop-shadow(1px 1px 10px rgba(0, 89, 255, 0.3))
+    }
+
+    #text {
+      padding-left: 5px;
+      padding-top: 2px;
+      height: 35px;
+      background-color: black;
+      border-bottom: 2px ridge rgb(172, 98, 39);
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="garden">
+    <a href="https://dantescanline.com" target="_blank">
+      <div id="text">
+
+        Games Blender Software<br>
+        No State No Copyright <img src="images/smilie7.gif" alt="" style="vertical-align: top;">
+      </div>
+      <img src="images/dante_scanline_badge.png" id="badge" alt="">
+      <img src="images/flames.gif" id="flames" alt="">
+      <video id="center-animation" alt="" autoplay="" loop="" draggable="true">
+        <source src="images/dantetitle.webm" type="video/webm">
+      </video>
+      <div id="flames-text">But The Soul Still Burns!</div>
+    </a>
+  </div>
+
+  <script>
+    document.getElementById('flames-text').addEventListener('click', (e) => {
+      e.preventDefault()
+      let snd = new Audio('images/soulburns.mp3');
+      snd.play();
+    })
+  </script>
+</body>
+
+</html>
