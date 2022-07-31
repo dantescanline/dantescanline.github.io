@@ -245,8 +245,9 @@ ul.gallery {
 
 .double-image img {
   /* width: 162px; */
-  margin-right:10px;
-  /* margin-bottom: 10px; */
+  margin-right:5px;
+
+  margin-bottom: 10px;
   vertical-align: middle;
   /* image-rendering: pixelated; */
 }

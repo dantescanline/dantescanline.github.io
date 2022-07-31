@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenhouse</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url(images/columnbarium.jpg);
+      background-size: cover;
+      image-rendering: crisp-edges;
+    }
+
+    #span-container {
+      width: 1060px;
+      margin: 0 auto;
+      position: relative;
+
+    }
+
+    #greenhouse {
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      gap: 10px 10px;
+      justify-content: center;
+    }
+
+    #main-header {
+      background: url(images/columnbarium_header.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .shelf {
+      background-image: url(images/tileshelf.png);
+      background-position: bottom center;
+      width: 900px;
+      height: 350px;
+      background-repeat: no-repeat;
+      position: relative;
+      margin: 0px auto 60px auto;
+    }
+
+    .shelf-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 250px);
+      gap: 20px;
+      justify-content: center;
+      position: absolute;
+      bottom: 74px;
+      left: 0px;
+      right: 0px;
+    }
+
+    .shelf-mini {
+      background-image: url(images/tileshelf_small.png);
+      position: absolute;
+      width: 203px;
+      height: 90px;
+      animation: hover;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes hover {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(0, 12px);
+      }
+
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <div id="">
+    <div id="main-header">
+      <a href="index.html"><img src="images/titlelogo.gif"></a>
+    </div>
+
+
+    <div id="span-container">
+
+      <h1>My Greenhouse</h1>
+      <p>This is my collection of other people's webgardens. A webgarden is a small 250px by 250px website you create
+        and
+        host on your own site. Then other people (like me) can embed it with a simple iframe. I stole the layout for
+        mine from <a href="melonking.net/">melonking</a>. The background images are from the Oakland Columnbarium, a
+        very beautiful space designed by architect Julia Morgan. She named the main building 'The chapel of the chimes'
+      </p>
+      <p>Read more about web gardens at <a href="https://missmoss.neocities.org/webgardens/tutorial/"> miss moss'
+          site</a>
+      </p>
+
+      <div class="shelf-mini" style="top:600px; left: -230px; ">
+        <img src="images/candleinholder.gif" alt="" style="position: absolute;bottom: 76px;left: 58px;">
+      </div>
+
+      <div class="shelf-mini" style="top:1100px; right: -230px; ">
+        <img src="images/purpleskull.gif" alt="" style="position: absolute;bottom: 76px;left: 38px;">
+        <img src="images/movskull.gif" alt="" style="position: absolute;bottom: 65px;left: 30px;">
+      </div>
+
+      <div class="shelf">
+        <div class="shelf-grid" style="align-items: center;">
+          <div>
+
+            This is my webgarden <img src="images/pointinghand.gif" alt="" style="transform: scale(-1, 1)"><br><br>
+            You can embed it in your greenhouse by copying this iframe code:
+            <br>
+            <br>
+            <b style="font-family: monospace;">&lt;iframe src=&quot;https://dantescanline.com/webgarden.html&quot;
+              height=&quot;250px&quot;
+              width=&quot;250px&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;</b>
+            <br>
+          </div>
+          <iframe src="webgarden.html" height="250px" width="250px" scrolling="no"></iframe>
+          <div>There's a secret sound that can be played. Can you find it?</div>
+        </div>
+      </div>
+      <div class="shelf">
+        <div class="shelf-grid">
+          <iframe src="https://melonking.net/webgarden.html" scrolling="no"
+            style="width:250px; height:250px;border:2px solid yellow;"></iframe>
+          <div> <a href="https://cinni.neocities.org/webgarden.html">
+              <iframe src="https://cinni.neocities.org/webgarden.html" scrolling="no" frameborder="1" height="250px"
+                width="250px">
+              </iframe></a></div>
+          <iframe src="https://sadgrl.online/webgarden.html" scrolling="no" width="250px" height="250px"
+            frameborder="1"></iframe>
+        </div>
+      </div>
+      <div class="shelf">
+        <div class="shelf-grid" style="align-items: center;">
+          <iframe src="https://theenderdraco.neocities.org/webgarden.html" scrolling="no" loading="lazy" width="250px"
+            height="250px"></iframe>
+          <iframe src="https://fairytrash.neocities.org/webgarden.html" height="250px" width="250px"
+            scrolling="no"></iframe>
+          <div style="text-align:center;padding:0px 20px;">dare you be the next one in my collection?</div>
+        </div>
+      </div>
+
+      <br><br><br>
+
+    </div>
+  </div>
+</body>
+
+</html>
