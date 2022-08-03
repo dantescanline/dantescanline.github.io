@@ -6,7 +6,7 @@ let items = [] // array of dom elements
 const BUBBLE_IN = true //makes the toys come in one at a time
 const BUBBLE_DELAY = 60 // if bubbling in, how much time between each new toy. bigger number is slower
 
-const PUSH_SPEED = 2 // base amount that toys push each other, bigger number means quicker stronger pushing
+const PUSH_SPEED = 4 // base amount that toys push each other, bigger number means quicker stronger pushing
 
 
 // Fisher–Yates knuth shuffle
@@ -45,8 +45,8 @@ class Toy {
     this.domElement = domElement
     this.domElement.style.position = 'absolute'
 
-    this.x = window.visualViewport.width / 2 + 100 - Math.random() * 200
-    this.y = window.visualViewport.height / 2 + 100 - Math.random() * 200
+    this.x = window.visualViewport.width / 2 + 200 - Math.random() * 400
+    this.y = window.visualViewport.height / 2 + 200 - Math.random() * 400
 
     this.visualX = this.x
     this.visualY = this.y
@@ -119,8 +119,8 @@ class Toy {
     let finalStrength = distance
 
     // if the toy pushing us is roughly bigger than us, get pushed more to help offset some biasing
-    if ((otherToy.width + otherToy.height) > (this.width + this.height)) {
-      finalStrength *= 2
+    if ((otherToy.width + otherToy.height) > (this.width + this.height) * 1.3) {
+      finalStrength *= 3
     }
 
     this.x += Math.cos(angle) * finalStrength
