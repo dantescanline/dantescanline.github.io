@@ -1,6 +1,13 @@
-
-
 let items = [] // array of dom elements
+
+// CONSTANTS, change these!
+
+
+const BUBBLE_IN = true //makes the toys come in one at a time
+const BUBBLE_DELAY = 50 // if bubbling in, how much time between each new toy. bigger number is slower
+
+const PUSH_SPEED = 2 // base amount that toys push each other, bigger number means quicker stronger pushing
+
 
 // Fisher–Yates knuth shuffle
 function shuffle(array) {
@@ -21,6 +28,16 @@ function shuffle(array) {
   return array;
 }
 
+// reenable items sequentially for bubbling
+function reEnable(index) {
+  if (index > items.length - 1) {
+    return
+  }
+
+  items[index].domElement.style.display = 'initial'
+
+  setTimeout(() => { reEnable(index + 1) }, BUBBLE_DELAY)
+}
 
 // the objects, with width height from DOM and then a position we set :)
 class Toy {
@@ -28,8 +45,8 @@ class Toy {
     this.domElement = domElement
     this.domElement.style.position = 'absolute'
 
-    this.x = window.visualViewport.width / 2 + 200 - Math.random() * 400
-    this.y = window.visualViewport.height / 2 + 200 - Math.random() * 400
+    this.x = window.visualViewport.width / 2 + 100 - Math.random() * 200
+    this.y = window.visualViewport.height / 2 + 100 - Math.random() * 200
 
     this.visualX = this.x
     this.visualY = this.y
@@ -88,7 +105,9 @@ class Toy {
     return otherToy.pointOverlaps(this.x, this.y)
   }
 
-  getPushed(otherToy, distance = 2) {
+  getPushed(otherToy) {
+    let distance = PUSH_SPEED
+
     let centerX = this.x
     let centerY = this.y
 
@@ -98,8 +117,10 @@ class Toy {
     let angle = Math.atan2(centerY - otherCenterY, centerX - otherCenterX)
 
     let finalStrength = distance
+
+    // if the toy pushing us is roughly bigger than us, get pushed more to help offset some biasing
     if ((otherToy.width + otherToy.height) > (this.width + this.height)) {
-      finalStrength *= 3
+      finalStrength *= 2
     }
 
     this.x += Math.cos(angle) * finalStrength
@@ -118,12 +139,22 @@ function init() {
 
   for (let i = 0; i < nodes.length; i++) {
     items.push(new Toy(nodes[i]));
+
+    if (BUBBLE_IN) {
+      if (i > 3) {
+        items[i].domElement.style.display = 'none'
+      }
+    }
+  }
+
+  if (BUBBLE_IN) {
+    reEnable(3)
   }
   requestAnimationFrame(main)
 }
 
 function main() {
-  items = shuffle(items)
+  // items = shuffle(items)
 
   items.map(item => item.updateSize())
 
