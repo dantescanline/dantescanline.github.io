@@ -55,7 +55,7 @@ h3 {
 
 
 #container {
-  background: var(--black);
+  background: url(images/tiles/dark_backgroundtile.png);
   margin: 0 auto;
   width: 1000px;
 }

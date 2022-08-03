@@ -41,7 +41,7 @@
 
     #toybox>*:hover {
       transform: scale(2);
-      z-index: 30;
+      z-index: 30 !important;
       image-rendering: pixelated;
     }
 
@@ -60,6 +60,19 @@
       margin-bottom: 10px;
       padding: 0px;
     }
+
+
+    a {
+      color: var(--white-link);
+    }
+
+    a:hover {
+      color: var(--white) !important;
+    }
+
+    a:visited {
+      color: var(--white-link);
+    }
   </style>
 
 
@@ -68,7 +81,9 @@
 <body>
   <div id="explain">
     <h2>Toybox</h2>
-    Collection of fun junk I like
+    Collection of fun junk I like<br>
+    <a href="index.html">
+      <-- Back</a>
   </div>
   <div id="toybox">
     <img src="images/junk/nue_bof3.webp" alt="">
@@ -98,6 +113,8 @@
     <img src="images/junk/morrigan.gif" alt="">
     <img src="images/junk/email_bikini.gif" alt="">
     <img src="images/junk/treasure_sparkle.gif" alt="">
+    <img src="images/junk/yaoi.gif" alt="">
+    <img src="images/junk/smiley-hyperspin.gif" alt="">
 
     <!-- tiny -->
     <img src="images/junk/coolspotdance.gif" alt="">
@@ -120,6 +137,7 @@
     <img src="images/junk/dantecastle.gif" alt="">
     <img src="images/junk/shannyn.gif" alt="">
     <img src="images/junk/knight.gif" alt="">
+
 
 
     <img src="quest/images/coins.png" alt="">

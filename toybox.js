@@ -4,7 +4,7 @@ let items = [] // array of dom elements
 
 
 const BUBBLE_IN = true //makes the toys come in one at a time
-const BUBBLE_DELAY = 50 // if bubbling in, how much time between each new toy. bigger number is slower
+const BUBBLE_DELAY = 60 // if bubbling in, how much time between each new toy. bigger number is slower
 
 const PUSH_SPEED = 2 // base amount that toys push each other, bigger number means quicker stronger pushing
 
@@ -184,6 +184,10 @@ function main() {
     }
     if (itemA.x + (itemA.width / 2) > window.visualViewport.width) {
       itemA.x -= 10
+      itemA.updatePosition()
+    }
+    if (itemA.y + (itemA.height / 2) > window.visualViewport.height) {
+      itemA.y -= 5
       itemA.updatePosition()
     }
 
