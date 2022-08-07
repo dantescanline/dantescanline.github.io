@@ -7,7 +7,7 @@ body {
   text-shadow: 2px 2px 2px black;
 }
 
-  .pulse {
+.pulse {
     image-rendering: pixelated;
     animation-name: light-pulse;
     animation-duration: 1s;
