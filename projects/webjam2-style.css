@@ -58,6 +58,12 @@ pre {
   100% { transform: translate(0,-4px);}
 }
 
+@keyframes spin {
+  0% { transform: rotate(-30deg)}
+  50% { transform: rotate(30deg)}
+  100% { transform: rotate(-30deg)}
+}
+
 #column {
   width:900px;
   margin:0 auto;
@@ -95,10 +101,15 @@ pre {
 
 .misc-particle {
   display: none;
+
 }
 
 .red-color-cycle {
   animation: red-cycle 2s infinite;
+}
+
+.color-cycle-green-spin {
+  animation: green-cycle  3s infinite, spin 3s infinite;
 }
 
 .color-cycle-green {
@@ -126,13 +137,27 @@ pre {
 }
 
 
+#top-scroll {
+  position: fixed;
+  top: 0px;
+  left:0;
+  color: rgb(0, 140, 255);
+  /* width:500px; */
+  height:20px;
+  background-color:rgba(0, 0, 0, 1);
+  text-align: center;
+  padding: 0px 10px;
+  z-index: 100;
+  font-weight: bold;
+}
+
 #bottom-scroll {
   position: fixed;
   bottom: 0px;
   left:50%;
   margin-left: -250px;
-  background: green;
+  background: rgb(16, 255, 16);
   width:500px;
   height:20px;
-  color:white;
+  color:rgb(0, 0, 0);
 }

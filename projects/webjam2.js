@@ -26,7 +26,7 @@ function unlikelyMiddleRandom() {
   while (true) {
     val = Math.random()
     if (val > 0.33 && val < 0.66) {
-      if (Math.random() > 0.8) {
+      if (Math.random() > 0.99) {
         break
       }
     } else {
@@ -41,6 +41,8 @@ let leftGuy;
 let rightGuy;
 let heartTemplates;
 let miscTemplates;
+
+let miscParticleTimer = 10
 
 let particles = []
 
@@ -102,7 +104,7 @@ function load() {
   heartTemplates = Array.from(document.querySelectorAll('.heart-particle'))
   miscTemplates = Array.from(document.querySelectorAll('.misc-particle'))
 
-  console.log(heartTemplates)
+  // console.log(heartTemplates)
   document.addEventListener('click', function (e) {
     e.pageX
   })
@@ -112,7 +114,7 @@ function load() {
 }
 
 function addMiscParticle() {
-  console.log('spawning misc particle')
+  // console.log('spawning misc particle')
 
 
   let xPos = unlikelyMiddleRandom() * window.visualViewport.width - 30
@@ -122,7 +124,7 @@ function addMiscParticle() {
   let p = spawnParticle(particle, xPos, yPos, false)
   p.falling = true
   p.speed *= lerp(0.8, 1.4, Math.random())
-  setTimeout(addMiscParticle, Math.random() * 450 + 650)
+  p.update()
 }
 
 
@@ -153,10 +155,16 @@ function frame() {
   for (let i = particles.length - 1; i >= 0; i--) {
     if (particles[i].dead) {
       particles.splice(i, 1)
-      console.log('particle removed from array')
+      // console.log('particle removed from array')
       continue
     }
     particles[i].update()
+  }
+
+  miscParticleTimer -= 1
+  if (miscParticleTimer <= 0) {
+    addMiscParticle()
+    miscParticleTimer = Math.random() * 30 + 30
   }
 
 }
