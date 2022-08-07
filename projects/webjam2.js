@@ -5,7 +5,8 @@ function lerp(a, b, t) {
 }
 
 function easeRange(input) {
-  return Math.pow(input, 2) / (Math.pow(input, 2) + Math.pow(1 - input, 2))
+  let eased = Math.pow(input, 2) / (Math.pow(input, 2) + Math.pow(1 - input, 2))
+  return (eased + input) * 0.5
 }
 
 function spawnParticle(templateElement, x, y, inContainer = true) {
