@@ -47,6 +47,13 @@ let miscParticleTimer = 10
 
 let particles = []
 
+let bottomTextElement
+let bottomTextTemplate = 'dante scanline says: "just another day in the dome!" - shout out melonland forums, fantasia malware, cinni and adz! - this website made with html and css - '
+let bottomTextIndex = 0
+let bottomText = 'asbsadasds'
+let textTimer = 0
+
+
 class Particle {
   speed = 1.4
   rota = 0
@@ -104,6 +111,9 @@ function load() {
 
   heartTemplates = Array.from(document.querySelectorAll('.heart-particle'))
   miscTemplates = Array.from(document.querySelectorAll('.misc-particle'))
+
+  bottomTextElement = document.querySelector('#bottom-scroll')
+  bottomText = ' - - - - - ' + bottomTextTemplate
 
   // console.log(heartTemplates)
   document.addEventListener('click', function (e) {
@@ -166,6 +176,16 @@ function frame() {
   if (miscParticleTimer <= 0) {
     addMiscParticle()
     miscParticleTimer = Math.random() * 30 + 30
+  }
+
+  textTimer -= 1
+  if (textTimer <= 0) {
+    textTimer += 15
+
+    bottomText = bottomText.slice(1)
+    bottomText += bottomTextTemplate[bottomTextIndex]
+    bottomTextElement.innerHTML = bottomText
+    bottomTextIndex = (bottomTextIndex + 1) % bottomTextTemplate.length
   }
 
 }

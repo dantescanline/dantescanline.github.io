@@ -12,6 +12,14 @@ pre {
   color: black;
 }
 
+a {
+  color: rgb(44, 188, 255);
+}
+
+a:hover {
+  color: lightblue;
+}
+
 @keyframes floating {
   0% { transform: translate(0px, -8px);}
   25% { transform: translate(8px, 0px)}
@@ -46,10 +54,28 @@ pre {
   100% { color: rgb(255, 132, 153);}
 }
 
+
+@keyframes yellow-cycle {
+  0% { color: rgb(255, 253, 159); }
+  50% { color: rgb(255, 174, 0); }
+  100% { color: rgb(255, 253, 159);}
+}
+
 @keyframes green-cycle {
   0% { color: rgb(153, 255, 132);}
   50% { color: rgb(49, 175, 112);}
   100% { color:rgb(153, 255, 132);}
+}
+
+@keyframes blue-cycle {
+  0% { color: rgb(78, 190, 255); }
+  50% { color: rgb(0, 89, 255); }
+  100% { color: rgb(78, 190, 255);}
+}
+@keyframes cloud-drift {
+  0% { transform: translate(-20px, 0)}
+  50% { transform: translate(20px, 0)}
+  100% { transform: translate(-20px, 0)}
 }
 
 @keyframes bob {
@@ -75,7 +101,7 @@ pre {
   position: absolute;
   width:300px;
   height:300px;
-
+  font-weight: bold;
 }
 
 
@@ -83,7 +109,7 @@ pre {
   position: absolute;
   width:300px;
   height:300px;
-
+  font-weight: bold;
 }
 
 #heart {
@@ -114,6 +140,15 @@ pre {
 
 .color-cycle-green {
   animation: green-cycle  3s infinite;
+  font-weight: bold;
+}
+
+.color-cycle-blue {
+  animation: blue-cycle 2s infinite, cloud-drift 7s infinite;
+}
+
+.color-cycle-yellow {
+  animation: yellow-cycle 1s infinite;
 }
 
 .orbit-a {
@@ -155,9 +190,11 @@ pre {
   position: fixed;
   bottom: 0px;
   left:50%;
-  margin-left: -250px;
+  white-space: pre;
+  overflow: hidden;
+  margin-left: -400px;
   background: rgb(16, 255, 16);
-  width:500px;
+  width:800px;
   height:20px;
   color:rgb(0, 0, 0);
 }
