@@ -58,7 +58,8 @@ if (url.includes("posts/")) {
 //Write the Header HTML, a series of list items containing links.
 let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' +
   '<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-  '<li><a href="' + relativePath + '/about.html">About</a></li> </ul>';
+  '<li><a href="' + relativePath + '/about.html">About</a></li> ' + 
+  '<li><a href="..">Main Site</a></ul>';
 
 //Write the Footer HTML, which has information about the blog.
 let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a></p>";
@@ -213,9 +214,9 @@ if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
 }
 if (document.getElementById("latest-blog-post")) {
-  let lastPost = postsArray[postsArray.length-1]
+  let lastPost = postsArray[0]
   console.log(lastPost)
-  const lastPostTitle = formatPostTitle(postsArray.length-1)
+  const lastPostTitle = formatPostTitle(0)
   document.getElementById("latest-blog-post").innerHTML = `<a href="blog/${lastPost[0]}">Latest Post ${niceDateFunction(lastPost)}: <br/> "${lastPostTitle}"</a>`;
 }
 

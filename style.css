@@ -103,10 +103,6 @@ h3 {
   text-shadow: 3px 3px 3px #000000;
 }
 
-#menu .item:hover {
-  border: 5px ridge #5c6446;
-}
-
 #menu a {
   text-decoration: none;
 }
@@ -122,7 +118,7 @@ h3 {
 }
 
 .menu-blog-small {
-  font-size:15px;
+  font-size:14px;
 }
 
 #menu-projects {
