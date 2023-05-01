@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Blog Post</title>
+  <link rel="icon" href="../images/favicon.png" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">...</div>
+    <div id="content">
+      <h1 id="postTitleH1"></h1>
+      <h4 id="postDate"></h4>
+      <h2>Settings for a sane Ubuntu 22.04</h2>
+      <p>Recent experiments with linux have proven it a possibility for a complete windows replacement for me. 🍻
+      </p>
+      <p>But what about this annoying gnome default interface? With a unified 'dock', a pointless 'activity manager'
+        across the top and a few other annoyances it seems the simplest and most uniform desktop is also very short on
+        configuration options.</p>
+        <p>We can fix this using gnome's <em>Extensions</em> and <em>Tweaks</em> GUIs</p>
+        <a href="../images/ubuntu-gnome-search.jpg" target="_blank">
+          <img src="../images/ubuntu-gnome-search.jpg" alt="Gnome extensions and tweaks">
+        </a>
+      <h3>The Goal</h3>
+      <a href="../images/ubuntu-final-screenshot.jpg" target="_blank">
+        <img src="../images/ubuntu-final-screenshot.jpg" alt="screenshot showing 'normal' windows style layout">
+      </a>
+      <p>Just want a windows-style taskbar, without application grouping or extra frames around the desktop? Let's do it
+      </p>
+
+      <h3>Reworking the dock into taskbar</h3>
+      <p>
+        A lot of the features that used to be available in gnome tweaks have been moved to the <em>Gnome Extensions</em>
+        application. You can grab it through apt as <code> gnome-shell-extension-manager</code> or thorugh the ubuntu
+        Software installer, where it is simply called <em>Extensions</em>
+      </p>
+      <p>
+        The actual extensions can be downloaded through <a href="https://extensions.gnome.org/">this website
+          (extensions.gnome.org)</a> using a browser plugin (god knows why...)
+      </p>
+      <p>
+        The extensions we want for the taskbar fixing are:
+      </p>
+      <ul>
+        <li>Dash To Panel</li>
+        <li>Ubuntu Dock (preinstalled)</li>
+      </ul>
+      <a href="../images/ubuntu-extensions.jpg" target="_blank">
+      <img src="../images/ubuntu-extensions.jpg" alt="Gnome Extensions GUI">
+      </a>
+      <p>
+        <em>Turn on</em> Dask to Panel and tweak the settings for panel thickness to your liking. <em>Turn off</em> the
+        ubuntu dock to get rid of the annoying dock. Make sure to check out all the options tabs under dash to panel's
+        settings, there's a lot available there.
+      </p>
+
+
+      <h3>Further Annoyances</h3>
+      <p>Use gnome's Tweaks UI to fix some other remaining oddities. Tweaks should be preinstalled and available through
+        ubuntu's Software manager</p>
+      <ul>
+        <li>Windows - Attach modal dialogs: turn this off for normal windows/mac style dialogs</li>
+        <li>Windows - Center new windows: i think this is odd, turn it off</li>
+        <li>Top Bar - Changing clock and calendar display under</li>
+        <li>Appearence - change lock screen here!</li>
+        <li>Keyboard & Mouse - here's missing settings for mouse acceleration 'Profiles' and touchpad settings</li>
+        <li>Startup Applications - kill these fuckers here!</li>
+      </ul>
+      <div id="nextprev"></div>
+    </div> <!-- end of div id="content" -->
+    <div id="footer"></div>
+  </div> <!-- end of div id="container" -->
+  <!-- Here's the link to our JavaScript! -->
+  <script src="../script.js"></script>
+</body>
+
+</html>

@@ -3,12 +3,13 @@
    "how to change link color." */
 
 body {
-  background-color: #eee;
+  background-color: #322;
   /* background-image: url('../images/bg_diamond.png'); */
   background-position: top;
   font-size: 16 px;
   font-family: OpenSans, Georgia, "Times New Roman", serif;
   margin: 0;
+  color: #fee;
 }
 
 @font-face {
@@ -22,6 +23,16 @@ p {
   /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
 }
 
+em {
+  font-weight: bolder;
+}
+
+code {
+  background-color: rgba(0,0,0,0.4);
+  padding: 5px;
+  border-radius: 2px 2px;
+}
+
 hr {
   border: solid #c7b591;
   border-width: 2px 0 0 0;
@@ -30,8 +41,7 @@ hr {
 img {
   max-width: 100%;
   height: auto;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em auto;
 }
 
 .right {
@@ -64,8 +74,16 @@ img {
   font-style: italic;
 }
 
+a {
+  color: #89f;
+}
+
+a:visited {
+  color: #c9f;
+}
+
 a:hover {
-  background-color: #fff6e6;
+  color: #55f;
 }
 
 h1,
@@ -74,7 +92,7 @@ h3,
 h4,
 h5 {
   font-family: Tahoma, Geneva, sans-serif;
-  color: #151515;
+  color: #fff;
 }
 
 /*#CONTAINER is the rectangle that contains everything but the background!*/
@@ -82,8 +100,8 @@ h5 {
   margin: 3em auto;
   width: 90%;
   max-width: 900px;
-  background-color: #fff;
-  color: #151515;
+  background-color: #333;
+  color: #fee;
   border-radius: 10px 10px;
   /* outline-color: #a9a9a9;
   outline-style: ridge;
@@ -98,7 +116,7 @@ h5 {
 
 /*HEADER STYLE*/
 #header {
-  background-color: #c4b59b;
+  background-color: #433;
   padding: 0 5%;
   border-radius: 10px 10px 0px 0px;
   /* border-color: #a9a9a9;
@@ -121,7 +139,7 @@ h5 {
 }
 
 #header li a {
-  color: black;
+  color: #fff;
   text-decoration: none;
   background-color: inherit;
 }

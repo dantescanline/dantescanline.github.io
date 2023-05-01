@@ -35,7 +35,9 @@ let postsArray = [
   //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
   //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
   // ["posts/2022-06-22-agorist-primer.html", encodeURI('Review: An Agorist Primer')]];
+  ["posts/2023-05-01-ubuntu-gnome-windows-style.html", encodeURI('Ubuntu Gnome Windows Style')],
   ["posts/2022-07-19-against-intellectual-property.html", encodeURI('Against Intellectual Property')]
+
 ];
 
 //-----------------------------
@@ -239,4 +241,23 @@ function niceDateFunction (thePost) {
   else if (monthSlice === "11") { month = "Nov"; }
   else if (monthSlice === "12") { month = "Dec"; }
   return thePost[0].slice(14, 16) + " " + month + ", " + thePost[0].slice(6, 10);
+}
+
+// GALLERY function for lazy programmers
+function wrapImageWithLink (theImage) {
+  let wrapper = document.createElement('a')
+
+  let url = theImage.getAttribute('src')
+  wrapper.setAttribute('href', url)
+  wrapper.setAttribute('target','_blank')
+
+  theImage.parentNode.appendChild(wrapper)
+  return wrapper.appendChild(theImage)
+}
+
+window.onload = function () {
+
+  let images = document.querySelectorAll('.gallery img')
+  console.log(images.length)
+  images.forEach(image => wrapImageWithLink(image))
 }
