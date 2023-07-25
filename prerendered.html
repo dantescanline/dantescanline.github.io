@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pre-rendered Sprites!</title>
+  <style>
+    body {
+      color: #FFE;
+      background-color: black;
+      font-family: monospace;
+      margin:0;
+      padding: 0;
+    }
+
+    #container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px 20px 100px 20px;
+      background-color: #251010;
+    }
+
+    .collection {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+      gap: 4px;
+    }
+
+    .collection img {
+      width: 100%;
+    }
+
+    img {
+      image-rendering: pixelated;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+
+    <h1>Pre-rendered Sprites</h1>
+
+    <div class="collection">
+      <img src="images/sprites/funky_kong.gif" alt="">
+      <img src="images/sprites/butcher.gif" alt="">
+      <img src="images/cait.gif" alt="">
+      <img src="quest/images/wizard1.gif" alt="">
+      <img src="images/junk/diablo.gif" alt="">
+      <img src="images/sprites/medic.gif" alt="">
+    </div>
+
+
+    <p>I love Pre-rendered sprites in games. They exhibit many beautiful qualities of 'bad' rendering including noise, greasiness and shredding.</p>
+    
+    
+    <h2>Clockwork Knight</h2>
+    https://youtu.be/6c3reFAM0QI?t=286
+    </div>
+</body>
+</html>
