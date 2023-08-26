@@ -16,7 +16,7 @@
 
 let blogName = "Dantescanline Blog";
 let authorName = "danteScanline";
-let authorLink = ""; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
+let authorLink = "https://dantescanline.com"; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
 
 //-----------------------------
 
@@ -35,6 +35,7 @@ let postsArray = [
   //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
   //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
   // ["posts/2022-06-22-agorist-primer.html", encodeURI('Review: An Agorist Primer')]];
+  ["posts/2023-08-26-making-tempeh.html", encodeURI('Making Tempeh')],
   ["posts/2023-05-01-ubuntu-gnome-windows-style.html", encodeURI('Ubuntu Gnome Windows Style')],
   ["posts/2022-07-19-against-intellectual-property.html", encodeURI('Against Intellectual Property')]
 
@@ -56,10 +57,9 @@ if (url.includes("posts/")) {
 }
 
 //Write the Header HTML, a series of list items containing links.
-let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' +
-  '<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
+let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Posts</a></li>' +
   '<li><a href="' + relativePath + '/about.html">About</a></li> ' + 
-  '<li><a href="..">Main Site</a></ul>';
+  '<li><a href="https://dantescanline.com">Main Site</a></ul>';
 
 //Write the Footer HTML, which has information about the blog.
 let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a></p>";
