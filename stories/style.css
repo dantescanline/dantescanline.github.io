@@ -1,0 +1,18 @@
+.reading-column {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.text-link {
+  font-size: 1.3em;
+  color: black;
+  font-weight: bold;
+}
+
+.text-link a {
+  color: black;
+}
+
+body {
+  font-size: 20px;
+}
