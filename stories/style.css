@@ -1,3 +1,12 @@
+/*
+
+
+OLD! DO NOT EDIT!
+
+
+
+*/
+
 .reading-column {
   width: 800px;
   margin: 0 auto;
@@ -9,8 +18,16 @@
   font-weight: bold;
 }
 
+.redactor .text-link {
+  color: #aaa;
+}
+
 a {
   color:  #ffd;
+}
+
+.redactor .text-link a {
+  color: #aaa !important;
 }
 
 body {
